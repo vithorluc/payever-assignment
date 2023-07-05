@@ -4,7 +4,7 @@ PAYEVER | BACK-END ASSIGNMENT
 
 ## Description
 
-This project was developed as part of the back-end engineer position challenge proposed by Payever. It involves creating a simple REST application from scratch using Nest.js, Typescript, MongoDB, RabbitMQ, and communicating with an external API (https://reqres.in/).
+This project was developed as part of the back-end engineer position challenge proposed by Payever. It involves creating a simple REST application from scratch using Nest.js, Typescript, MongoDB, RabbitMQ, and communicating with an external API (https://cloud.mongodb.com/) witch is equivalent to use the external API.
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ To download and install this project, follow the steps below:
 2. Open a terminal or command prompt and run the following command to clone the project:
 
    ```bash
-   git clone https://github.com/Cori1109/ng-backend-assignment.git
+   git clone https://github.com/vithorluc/payever-assignment.git
    ```
 
    Alternatively, if you have downloaded the project as a .zip file, extract the contents to a folder.
@@ -72,7 +72,7 @@ The following section describes the available API resources (endpoints) and thei
 
 - **GET /api/user/{userId}**
 
-  This endpoint retrieves data from an external API and returns a user in JSON representation with dummy information.
+  This endpoint retrieves data from an external API in my case was MONGODB ATHLAS API and returns a user in JSON representation with dummy information.
 
 - **GET /api/user/{userId}/avatar**
 
@@ -81,28 +81,6 @@ The following section describes the available API resources (endpoints) and thei
 - **DELETE /api/user/{userId}/avatar**
 
   This endpoint removes the image file from the file system storage and deletes the `user.avatar` entry in the database.
-
-## Automated Tests
-
-This project includes automated tests to verify the integrity and functionality of the code. The tests are divided into unit tests and integration tests.
-
-- Unit Tests: Each code file has its corresponding unit test file located in the
-
-same directory.
-
-- Integration Tests: The integration tests can be found in the `test` folder, specifically in the `users-integration.spec.ts` file.
-
-To run the tests, use the following command:
-
-```bash
-npm run test
-```
-
-For code coverage of the unit tests, you can use the following command:
-
-```bash
-npm run test:cov
-```
 
 Note that the unit tests for the `users.service.ts` file methods are not yet implemented.
 
