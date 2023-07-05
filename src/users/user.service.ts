@@ -34,13 +34,13 @@ export class UsersService {
     createdUser.avatar = path;
 
     // Dummy email sending logic
-    // await this.sendEmail(createdUser);
+    await this.sendEmail(createdUser);
 
     // RabbitMQ event sending logic
-    // await this.rabbitMQService.sendEvent(
-    //   'user_created',
-    //   JSON.stringify(createdUser),
-    // );
+    await this.rabbitMQService.sendEvent(
+      'user_created',
+      JSON.stringify(createdUser),
+    );
 
     await createdUser.save();
 
